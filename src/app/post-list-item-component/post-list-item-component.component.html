@@ -1,0 +1,11 @@
+<div class="card offset-md-3 col-md-6" style="margin-bottom: 10px">
+  <div class="card-header" [ngClass]="{'bg-success': post.loveIts>0, 'bg-danger': post.loveIts<0}">
+    <h5 class="card-title" style="display: inline">{{post.title}}</h5>
+    <span class="float-right" style="display: inline">{{post.created_at | date:'medium'}}</span>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{post.content}}</p>
+    <button (click)="loveItIncr()" class="btn btn-success">Love it !</button>
+    <button (click)="loveItDecr()" class="btn btn-danger" style="margin-left: 15px">Don't Love it !</button>
+  </div>
+</div>
